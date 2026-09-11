@@ -1,0 +1,39 @@
+cloudlab_user
+CloudLab123456
+
+
+Ea_My4bznL6h9AE
+
+mongodb+srv://<db_username>:<db_password>@cluster0.bzy34jy.mongodb.net/?appName=Cluster0
+
+
+
+1️⃣ LẤY DANH SÁCH SINH VIÊN (READ / GET)
+bash
+curl -s http://localhost:5000/api/students | jq
+
+2️⃣ THÊM SINH VIÊN MỚI (CREATE / POST)
+bash
+curl -s -X POST http://localhost:5000/api/students \
+  -H "Content-Type: application/json" \
+  -d '{"studentId": "236125", "name": "Le Van C", "email": "levanc@example.com"}' \
+  | jq
+3️⃣ CẬP NHẬT SINH VIÊN (UPDATE / PUT)
+
+Giả sử bạn muốn sửa lại thông tin sinh viên đầu tiên (_id: 6a98dcee735b009de7117ed0):
+
+bash
+curl -s -X PUT http://localhost:5000/api/students/<_id> \
+  -H "Content-Type: application/json" \
+  -d '{"studentId": "236125", "name": "Le Van C Updated", "email": "levanc.new@example.com"}' \
+  | jq
+4️⃣ XÓA SINH VIÊN (DELETE)
+
+Giả sử bạn muốn xóa sinh viên thứ 2 vừa tạo ở bước 2 (dùng _id của sinh viên đó, KHÔNG PHẢI _id mẫu dưới đây):
+
+bash
+curl -s -X DELETE http://localhost:5000/api/students/<_id> | jq
+///////
+
+
+
