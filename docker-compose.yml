@@ -1,0 +1,21 @@
+services:
+  # Câu 81: Khai báo Service backend
+  backend:
+    build: ./server
+    container_name: mern-backend
+    # Câu 83: Ánh xạ port cho backend
+    ports:
+      - "5000:5000"
+    # Câu 85: Biến môi trường MONGODB_URI cho Backend
+    env_file:
+      - ./server/.env
+
+  # Câu 82: Khai báo Service frontend
+  frontend:
+    build: ./client
+    container_name: mern-frontend
+    # Câu 84: Ánh xạ port cho frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend

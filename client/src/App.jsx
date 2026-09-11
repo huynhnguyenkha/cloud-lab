@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
-const API_URL = 'http://localhost:5000/api/students';
+const API_URL = 'https://silver-space-robot-g4xr96v4wggghvx6j-5000.app.github.dev/api/students';
 
 function App() {
   const [students, setStudents] = useState([]);

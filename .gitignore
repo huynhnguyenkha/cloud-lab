@@ -4,3 +4,6 @@ bin/
 build/
 *.log
 .env
+.env
+**/.env
+**/node_modules
