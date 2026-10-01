@@ -83,7 +83,7 @@ const fetchStudents = async () => {
 
   return (
     <div style={{ maxWidth: '800px', margin: '40px auto', fontFamily: 'Arial' }}>
-      <h1>Quản Lý Sinh Viên</h1>
+      <h1>Quản Lý Sinh Viên - Phiên bản 2.0</h1>
 
       {/* Form thêm/sửa */}
       <form onSubmit={handleSubmit} style={{ marginBottom: '30px' }}>
